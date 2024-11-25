@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body takes the full viewport height */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the form container */
+.form-container {
+    display: flex;
+    justify-content: flex-start; /* Align everything to the left */
+    align-items: flex-start;
+    gap: 5px; /* Minimized spacing between flex children */
+    padding: 20px; /* Reduced padding inside the container */
+    background-color: rgb(252, 246, 235);
+}
+
+form {
+    flex: 1;
+    margin-right: 10px; /* Minimal gap between form and next element */
+}
+
+label {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 5px; /* Reduced space below the label */
+}
+
+input {
+    font-size: 28px; /* Slightly smaller font size */
+    width: 600px;
+    height: 200px; /* Reduced height for smaller inputs */
+    margin-bottom: 5px; /* Minimal vertical spacing */
+    padding: 5px 10px; /* Tightened padding inside input fields */
+    border-radius: 5px;
+}
+
+button {
+    font-size: 28px; /* Smaller font size to match input */
+    width: 400px;
+    height: 70px; /* Reduced button height */
+    margin-top: 5px; /* Reduced spacing above the button */
+    padding: 5px 10px; /* Reduced internal padding */
+    background-color: #d2b897;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.faq-box {
+    width: 100%;
+    max-width: 900px;
+    background: #e2bb99;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 200px;
+
+}
+
+.faq-header {
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #cfad91;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item:hover {
+    background: #d7b08d;
+}
+
+.faq-question {
+    font-size: 28px;
+    font-weight: bold;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question svg {
+    width: 16px;
+    height: 16px;
+    fill: #888;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question svg {
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    display: none;
+    font-size: 22px;
+    color: #666;
+    margin-top: 8px;
+    padding-left: 20px;
+}
+
+.faq-item.active .faq-content {
+    display: block;
+}
+
+.pro {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px; /* Adjust the margin as needed */
+    margin-top: -250px; /* Adjust the top margin to align with your box */
+    padding-right: 50px;
+}
+
+
+.yellow{
+    display: flex;
+}
+
+
+
+
+/* Linktree Section */
+.linktree-section {
+    margin-top: 20px;
+    padding-top: 10px;  /* Reduced padding for less space */
+}
+
+.linktree-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 26px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #dd4a2c; /* Optional background for the link */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.linktree-link img {
+    height: 35px;
+    width: auto;
+}
+
+.linktree-link:hover {
+    background-color: #5751c9; /* Darker shade on hover */
+}

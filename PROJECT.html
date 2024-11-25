@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOXOUT</title>
+    <link rel="stylesheet" href="PROJECT.css">
+</head>
+<body>
+    <div class="top-space" style="background-color:rgb(252, 246, 235);">
+        <img src="TOXOUT.png" alt="Logo" height="100px">
+        
+    </div>
+    <div class="intro">
+        <img src="bg.png" alt="Logo" height="950px" width="auto">
+    </div>
+
+    <div class="form-container" style="background-color:rgb(252, 246, 235);">
+        <form id="ingredient-form">
+            <br><br><br><br><br>
+            <label for="ingredients" style="font-size: 33px; margin-top: 100px;">1. Manual Input (comma-separated):</label>
+            <br><br>
+            <input type="text" id="ingredients" placeholder="ENTER INGREDIENTS(e.g., water, glycerin, sodium hyaluronate)">
+            <br><br>
+            <button id="analyze-button" type="submit">📌Analyze</button>
+            <br><br><br><br><br>
+            <label for="file-upload" class="file-upload-label" style="font-size: 33px;">2. Upload an Image:</label>
+            <input type="file" id="file-upload" accept="image/*">
+            <br>
+            <label class="my-text" style="font-size: 33px;">3. Web capture</label>
+            <button class="my-button">Click Me📸</button>
+            <br><br><br><br><br><br><br><br><br>
+            <div class="r" style="font-size: 33px;">
+                4.Speech
+            </div>
+            <button id="start">🎤 Start Speaking</button>
+            <p id="output">Your speech will appear here...</p>
+
+            <script>
+                // Check for browser support
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                if (SpeechRecognition) {
+                    const recognition = new SpeechRecognition();
+                    recognition.lang = 'en-US'; // Set language
+                    recognition.interimResults = false; // Return final results only
+
+                    const startButton = document.getElementById('start');
+                    const output = document.getElementById('output');
+
+                    startButton.addEventListener('click', () => {
+                        recognition.start(); // Start recognition
+                        output.textContent = "Listening...";
+                });
+
+                // When speech is recognized
+                recognition.onresult = (event) => {
+                    const transcript = event.results[0][0].transcript; // Get spoken text
+                    output.textContent = `You said: ${transcript}`;
+                };
+
+                // Handle errors
+                recognition.onerror = (event) => {
+                    output.textContent = `Error: ${event.error}`;
+                };
+
+                // When speech ends
+                recognition.onend = () => {
+                    output.textContent += " (Recognition ended)";
+                };
+                } else {
+                document.body.innerHTML = `<h1>Your browser does not support Speech Recognition.</h1>`;
+                }
+            </script>
+        </form>
+        <div class="o">
+            <br><br><br><br><br><br><br><br><br>
+            <img src="INTRO.png" alt="Uploaded Image" height="800px" width="600px">
+        </div>
+    </div>
+    <div class="our" style="background-color:rgb(252, 246, 235); ">
+        <div class="method" style="display: flex; justify-content: space-between; align-items: center; gap: 20px; ">
+            <div class="text-box" style="flex: 1; margin-left: 50px;">
+                <div class="image-text" style="font-size: 33px; font-family: Noto Serif;">
+                    <br><br>
+                    <strong>OUR MOTIVE:</strong> <br>
+                    Our website empowers users to make informed decisions about the products they consume or use by breaking down complex ingredient lists. It helps to enhance transparency for consumer trust.
+                </div>
+            </div>
+            <div class="text-box" style="flex: 1; margin-right: 20px;">
+                <div class="image-text" style="font-size: 33px; font-family: Noto Serif;">
+                    <br><br>
+                    <strong>OUR VISION:</strong> <br>
+                    Our vision is to provide clear, scientific insights into product composition, empowering users to make safe and informed choices. Our platform simplifies ingredient transparency, catering to diverse skin needs and values like eco-friendliness and cruelty-free products.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="method" style="font-size: 30px; background-color:rgb(252, 246, 235);">
+        <br><br>
+        <div class="drop" style="margin-left: 33px;">
+            <img src="drop.png" height="200px" width="auto" >
+        </div>
+        <div class="m" style="margin-left: 20px; margin-right: 200px;  margin-left: 50px;">
+            <h3>Our Methodology</h3><br>
+            Transparency is our priority. We want to give you a bit more info on how exactly our ingredient checker works and why you can trust its results.<br>
+            Our ingredient checker is designed to give you accurate and reliable information, empowering you to make informed decisions about the products you use.
+        </div>
+    <div class="sci" style="font-size: 30px; background-color:rgb(252, 246, 235) ;">
+        <br><br><br>
+        <div class="s" style="margin-left: 20px;margin-right: 200px;  margin-left: 50px;">
+            <h3>We're not influenced by brands</h3><br>
+            TOXOUT is an independent company and does not allow brands to influence the information we display about ingredients or products.
+            Thank you for supporting us by using our site. It helps us remain independent and focus on our goal - providing you with the most accurate information about the ingredients in your products.
+        <br><br><br>
+            <h3>Scientifically-backed ingredient data</h3><br>
+            We only include ingredient data that's backed by scientific research. We encourage you to check out our <br>sources by heading to the dedicated page for an ingredient if you're interested in learning more.<br> 
+            We believe in empowering you with knowledge. Every ingredient we include is <br>carefully selected based on credible scientific researchto ensure its efficacy and safety. <br> Our goal is  to provide you with accurate,evidence-based <br>information so you can make informed decisions aboutthe products you use.
+            <br><br><br><br><br><br><br>
+        </div>
+        <div class="pro">
+            <img src="product.png" height="450px" width="auto">
+        </div>
+        <div class="faq-box">
+            <div class="faq-header">Frequently Asked Questions</div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I check my skincare ingredients?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+                </div>
+                <div class="faq-content">You can use ingredient analyzer to check the composition of your skincare products.
+                    Scroll up and paste a list of ingredients(or upload a photo of an ingredient list) into our ingrient checker.
+                    Give our algorithms a few seconds to work their magic and you'll get the harful ones!
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do you know if ingredients are safe?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+                </div>
+                <div class="faq-content">Our ingredient analyzer helps you to determine whether or not a product contains harmful and damage causing elmemets in the product.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Which skincare ingredients should I avoid?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+                </div>
+                <div class="faq-content"> Figuring out which ingredients are good and bad for your skin is a challenge, and often requires a lot of trial and error before you can fully understand what is good/bad for your skin. Our ingredient checker marks certain ingredients that are best avoided by those with certian skin types and concerns..</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do you find the ingredients in a product?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"></path></svg>
+                </div>
+                <div class="faq-content">Check the product's packaging, official website, or use an ingredient database.It can sometimes be a challenge to find an accurate ingredient list for more obscure products.</div>
+            </div>
+            
+        </div>
+        <br><br><br><br><br><br>
+    
+        <script>
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+        </script>
+        <div class="yellow">
+            <img src="product2.png" height="450px" width="auto">
+            <div class="yt" style="display: flex; margin-right: 70px; font-size: 30px; ">
+                <h2>About Us</h2><br>
+                TOXOUT, your trusted resource for understanding the science behind skincare. <br>Our mission is to empower you to make informed choices by providing accurate and <br>detailed analyses of skincare product ingredients. Whether you're a skincare enthusiast or <br>someone with specific skin concerns, our platform breaks down complex ingredient lists into <br>clear, actionable insights. We believe in transparency, education, and helping you achieve <br>your skin goals with confidence. Let us guide you toward healthier, <br>happier skin—one ingredient at a time!
+                <br><br><br><br><br><br>
+            </div>
+        </div>
+        
+        <div class="links" style="
+            background-image: linear-gradient(
+                to right, 
+                rgba(245, 181, 136, 0.5), 
+                rgba(191, 98, 31, 0.5)
+        ); 
+        padding: 20px;">
+            <div class="text" style="margin-left: 70px; margin-right: 70px;">
+                <div class="contact" style="display: flex; justify-content: space-between; align-items: center; gap: 20px; ">
+                    <div class="us" style="flex: 1; margin-left: 50px;">
+                        <div class="image-text" style="font-size: 33px; margin-left: 210px;">
+                            <br><br>
+                            <h4>Contact Us</h4> <br>  
+                        </div>
+                        <div class="linktree-section" style="text-align: center; margin-top: 20px; padding-top: 10px; ">
+                            <a href="https://linktr.ee/toxout" target="_blank" class="linktree-link">
+                                <img src="link.png" alt="Linktree Logo" height="40px" style="vertical-align: middle; margin-right: 8px;">
+                                <span style="font-size: 26px; font-family: Arial, sans-serif; color: #fff; text-decoration: none;">Visit Our Linkedin</span>
+                            </a>
+                        </div>   
+                    </div>
+
+                    <div class="know more" style="flex: 1; margin-right: 20px;">
+                        <div class="image-text" style="font-size: 33px; font-family: Noto Serif;">
+                            <br><br>
+                            <h4>To Know More...</h4><br>
+                            <div class="linked">
+                                <a href="https://www.safecosmetics.org/toxic-ingredients/">Safe Cosmetic</a><br>
+                                <a href="https://www-ewg-org.webpkgcache.com/doc/-/s/www.ewg.org/the-toxic-twelve-chemicals-and-contaminants-in-cosmetics">Toxic and chemicals in cosmetics</a><br>
+                                <a href="https://www.realsimple.com/beauty-fashion/skincare/skincare-ingredients-to-avoid">Ingredients to avoid</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    
+    
+</body>
+</html>

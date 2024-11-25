@@ -1,0 +1,165 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body takes the full viewport height */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Top space with white background */
+.top-space {
+    height: 60px;
+    background-color: #AFC5B6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.top-space img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 60px;
+}
+
+.top-space h1 {
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    color: black;
+    text-align: left;
+    z-index: 1;
+}
+
+/* Animated banner section */
+.animation-container {
+    background-image: url('s4.jpeg');
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+    animation: slider 10s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-image 1s ease-in-out;
+}
+
+@keyframes slider {
+    0% { background-image: url('c.jpeg'); }
+    25% { background-image: url('b.JPG'); }
+    50% { background-image: url('s1.jpeg'); }
+    75% { background-image: url('s4.jpeg'); }
+    100% { background-image: url('c.jpeg'); }
+}
+
+.p1 {
+    background-color: #AFC5B6;
+    background-size: cover;
+}
+
+/* Styling for the container with text and image */
+.image-text-container {
+    display: flex; /* Aligns text and image side by side */
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center; /* Vertically centers the text and image */
+    gap: 10px; /* Adds space between text and image */
+}
+
+/* Styling for the text section */
+.image-text {
+    font-size: 20px; /* Adjust the text size */
+    line-height: 1.5; /* Improves text readability */
+    color: black; /* Sets the text color */
+    font-family: Arial, sans-serif; /* Sets a clean font */
+    flex: 1;
+    text-align: left; /* Aligns the text to the left */
+}
+
+/* Styling for the form and image container */
+.form-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Ensures text/buttons are on the left and the image on the right */
+    align-items: flex-start; /* Aligns items to the top */
+    padding: 50px;
+    background-color: #AFC5B6;
+}
+
+/* Form section styles */
+form {
+    flex: 1; /* Allows form to take up available space */
+    margin-right: 20px; /* Adds spacing between the form and the image */
+}
+
+label, input, button {
+    margin: 10px 0; 
+}
+
+label {
+    font-family: Playfair display;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+input {
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 550px;
+    height: 350px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button {
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 80px;
+    padding: 10px 20px;
+    background-color: rgb(235, 131, 93);
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+span{
+    font-size: 38px;
+    font-family: Playfair display;
+}
+
+/* Specific styles for the Analyze button */
+#analyze-button {
+    width: 400px !important;
+    height: 50px !important;
+    font-size: 20px !important;
+    background-color: #f67257 !important;
+    color: white !important;
+}
+
+#analyze-button:hover {
+    background-color: #e05b45; /* Slightly darker hover color */
+    transform: scale(1.05); /* Small zoom-in effect */
+}
+
+/* Image container */
+.o {
+    flex-shrink: 0; /* Prevents the image container from shrinking */
+}
+
+.o img {
+    max-width: 600px; /* Limits the image size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+
