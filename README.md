@@ -4,7 +4,7 @@ TOXOUT- A Harmful Ingredient Detector🧴
 
 This project is made by me along with my team. It helps users identify harmful ingredients in cosmetic, skincare, or food products using OCR (Optical Character Recognition) and speech recognition. The program scans ingredient labels from images, webcam captures, or voice input, extracts the text, and cross-checks it against a predefined list of harmful chemicals.
 
-🚀 Features
+🚀 Features :
 
 ✅ Manual Input – Enter ingredient lists manually for checking.
 
@@ -16,13 +16,15 @@ This project is made by me along with my team. It helps users identify harmful i
 
 ✅ Preprocessing for OCR – Applies image enhancement for better text extraction.
 
-🎯 Future Improvements
+🎯 Future Improvements :
 
 🚀 Mobile App Integration
+
 🚀 Database for ingredient safety levels
+
 🚀 Real-time scanning with AR
 
-🤝 Contributing
+🤝 Contributing :
 
 Feel free to open issues, fork the repo, and submit pull requests!
 
