@@ -76,11 +76,36 @@ def listen_and_transcribe():
                 print(f"Could not request results from Google Speech Recognition service; {e}")
             except Exception as e:
                 print(f"Error: {str(e)}")
+                
+# Function to process the image before OCR
+def preprocess_image(image_path):
+    # Read image
+    image = cv2.imread(image_path)
+
+    # Resize the image for better OCR
+    height, width = image.shape[:2]
+    new_width = 800
+    new_height = int((new_width / width) * height)
+    resized_image = cv2.resize(image, (new_width, new_height))
+
+    # Apply Gaussian Blur to reduce noise
+    blurred_image = cv2.GaussianBlur(resized_image, (5, 5), 0)
+
+    # Convert the image to grayscale
+    gray_image = cv2.cvtColor(blurred_image, cv2.COLOR_BGR2GRAY)
+
+    # Apply thresholding to get a binary image (black and white)
+    _, thresh_image = cv2.threshold(gray_image, 150, 255, cv2.THRESH_BINARY_INV)
+
+    return thresh_image  
 
 # Function to extract text from an image using Tesseract OCR
 def extract_text_from_image(image_path):
-    image = Image.open(image_path)
-    text = pytesseract.image_to_string(image)
+     # Preprocess the image before extracting text
+    processed_image = Image.open(image_path)
+
+    # Use pytesseract to extract text
+    text = pytesseract.image_to_string(processed_image)
     return text.strip().lower()
 
 # Main program
