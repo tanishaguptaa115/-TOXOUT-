@@ -54,6 +54,4 @@ Select an input method:
 ## 🤝 Contributing  
 Feel free to open issues, fork the repo, and submit pull requests!  
 
----
 
-Let me know if you want any modifications! 🚀
