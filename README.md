@@ -7,11 +7,7 @@ This project helps users identify harmful ingredients in cosmetic, skincare, or 
 🚀 Features
 
 ✅ Manual Input – Enter ingredient lists manually for checking.
-
 ✅ Image Upload – Extracts text from an uploaded image using Tesseract OCR.
-
 ✅ Webcam Capture – Takes a picture of the label and scans for harmful ingredients.
-
 ✅ Voice Input – Listens to spoken ingredients and detects harmful ones.
-
 ✅ Preprocessing for OCR – Applies image enhancement for better text extraction.
