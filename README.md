@@ -21,11 +21,11 @@ Currently, this project is not yet integrated with its website via an API—we a
 
 ## **🎯 Future Improvements**
 
--🚀 Mobile App Integration
+- 🚀 Mobile App Integration
 
--🚀 Database for ingredient safety levels
+- 🚀 Database for ingredient safety levels
 
--🚀 Real-time scanning with AR
+- 🚀 Real-time scanning with AR
 
 🤝 Contributing :
 
