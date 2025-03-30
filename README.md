@@ -16,3 +16,15 @@ This project is made by me along with my team. It helps users identify harmful i
 
 ✅ Preprocessing for OCR – Applies image enhancement for better text extraction.
 
+🎯 Future Improvements
+
+🚀 Mobile App Integration
+🚀 Database for ingredient safety levels
+🚀 Real-time scanning with AR
+
+🤝 Contributing
+
+Feel free to open issues, fork the repo, and submit pull requests!
+
+
+
