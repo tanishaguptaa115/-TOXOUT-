@@ -10,21 +10,15 @@ Currently, this project is not yet integrated with its website via an API—we a
 ## **🚀 Features**
 
 ✅ **Manual Input** – Enter ingredient lists manually for checking.
-
 ✅ **Image Upload** – Extracts text from an uploaded image using Tesseract OCR.
-
 ✅ **Webcam Capture** – Takes a picture of the label and scans for harmful ingredients.
-
 ✅ **Voice Input** – Listens to spoken ingredients and detects harmful ones.
-
 ✅ **Preprocessing for OCR** – Applies image enhancement for better text extraction.
 
 ## **🎯 Future Improvements**
 
 - 🚀 Mobile App Integration
-
 - 🚀 Database for ingredient safety levels
-
 - 🚀 Real-time scanning with AR
 
 🤝 Contributing :
