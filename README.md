@@ -1,30 +1,31 @@
-# TOXOUT- A Harmful Ingredient Detector🧴
+# **TOXOUT- A Harmful Ingredient Detector**🧴
 
-📌 Description
+## **📌 Description**
 
-This project is made by me along with my team. It helps users identify harmful ingredients in cosmetic, skincare, or food products using OCR (Optical Character Recognition) and speech recognition. The program scans ingredient labels from images, webcam captures, or voice input, extracts the text, and cross-checks it against a predefined list of harmful chemicals.
+This project is made by me along with my team. It helps users **identify harmful ingredients** in cosmetic, skincare, or food products using **OCR (Optical Character Recognition)** and **speech recognition**. The program scans ingredient labels from images, webcam captures, or voice input, extracts the text, and cross-checks it against a predefined list of harmful chemicals.
 
-Currently, this project is not yet integrated with its website via an API—we are still working on it. Future updates will include API integration, allowing users to check ingredients directly on the website for a seamless experience. Stay tuned! 
+Currently, this project is not yet integrated with its website via an API—we are still working on it. Future updates will include API integration, allowing users to check ingredients directly on the website for a seamless experience. Stay tuned!
 
-🚀 Features :
+---
+## **🚀 Features**
 
-✅ Manual Input – Enter ingredient lists manually for checking.
+✅ **Manual Input** – Enter ingredient lists manually for checking.
 
-✅ Image Upload – Extracts text from an uploaded image using Tesseract OCR.
+✅ **Image Upload** – Extracts text from an uploaded image using Tesseract OCR.
 
-✅ Webcam Capture – Takes a picture of the label and scans for harmful ingredients.
+✅ **Webcam Capture** – Takes a picture of the label and scans for harmful ingredients.
 
-✅ Voice Input – Listens to spoken ingredients and detects harmful ones.
+✅ **Voice Input** – Listens to spoken ingredients and detects harmful ones.
 
-✅ Preprocessing for OCR – Applies image enhancement for better text extraction.
+✅ **Preprocessing for OCR** – Applies image enhancement for better text extraction.
 
-🎯 Future Improvements :
+## **🎯 Future Improvements**
 
-🚀 Mobile App Integration
+-🚀 Mobile App Integration
 
-🚀 Database for ingredient safety levels
+-🚀 Database for ingredient safety levels
 
-🚀 Real-time scanning with AR
+-🚀 Real-time scanning with AR
 
 🤝 Contributing :
 
